@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        text-align: center;
+        line-height: 200px;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <div id="box">box</div>
+    <div id="id"></div>
+    <div id="id2"></div>
+    <div class="x"></div>
+    <div class="x2"></div>
+    <div data-nazeer="y"></div>
+    <h1 class="z"></h1>
+    <h2 id="id3"></h2>
+
+    <script>
+      let url = document.URL;
+      document.getElementById("demo").innerHTML = url;
+
+      document.getElementById("box").style.background = "aqua";
+
+      document.getElementById("id").innerHTML = "hello";
+
+      const a = (document.getElementsByClassName("x").innerHTML = "bhai");
+
+      document.write(a);
+
+      document.querySelector("div#id2").innerHTML = "hii";
+      document.querySelector("div.x2").innerHTML = "khan bhai";
+
+      document.querySelector('div[data-nazeer="y"]').innerHTML = "Good morning";
+
+      // object data type
+
+      let student = {
+        name: "Nazeer Ahmad",
+        roll: 73,
+      };
+      document.getElementById("id3").innerHTML = student.name;
+    </script>
+  </body>
+</html>
