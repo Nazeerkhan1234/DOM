@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="num1" size="20"/>
+      <select name="" id="id1">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="text" name="num2" size="20"/>
+      <input type="button" value="=" onclick="calc()" size="15"/>
+        <h3></h3>
+     
+    </form>
+
+    <script>
+      let n1 = (document.querySelector('[name="num1"]'));
+      let n2 = (document.querySelector('[name="num2"]'));
+   
+      function calc() {
+        let num1=parseFloat(n1.value);
+        let num2=parseFloat(n2.value)
+        let operator= (document.getElementById('id1')).value;
+        let result = document.getElementsByTagName('h3')[0];
+        
+        switch(operator){
+            case '+':
+            result.innerHTML=num1+num2;
+            break;
+            case '-':
+            result.innerHTML=num1-num2;
+            break;
+            case '*':
+            result.innerHTML=num1*num2;
+            break;
+            case '/':
+            result.innerHTML=num1/num2;
+            break
+            default:
+        }
+        
+      }
+    </script>
+  </body>
+</html>
